@@ -1,0 +1,8 @@
+<h3>Shipping Prices</h3>
+
+<!-- O async foi utilizado para realizar a leitura do stream de dados
+assincronamente, já que é um recurso externo! -->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
